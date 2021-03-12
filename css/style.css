@@ -394,6 +394,7 @@ body .fas {
 }
 .extra [class*=col-] {
   padding: 0 5rem 0 1rem;
+  margin-bottom: 2rem;
 }
 .extra p.title {
   font-family: "Bebas Neue", cursive;
@@ -551,6 +552,11 @@ section:first-of-type::before, section:last-of-type::after {
 
 .reviews {
   color: #171717;
+  min-height: 300px;
+  position: relative;
+}
+.reviews .container-fluid {
+  min-height: 300px;
 }
 .reviews .row {
   width: 100%;
@@ -558,8 +564,7 @@ section:first-of-type::before, section:last-of-type::after {
   overflow: visible;
 }
 .reviews .col-lg-4 {
-  display: inline-block;
-  flex: none;
+  position: absolute;
 }
 .reviews .col-lg-4:last-of-type {
   margin-right: 0;
@@ -639,13 +644,14 @@ section:first-of-type::before, section:last-of-type::after {
   background-color: #19ce96;
   display: block;
 }
-.slider .ui-slider-horizontal .ui-slider-handle {
-  margin-left: -80px;
-}
 .slider .ui-slider-horizontal {
   height: 8px;
-  width: 520px;
-  margin-left: 39px;
+  width: 400px;
+  margin-left: 81px;
+}
+.slider .ui-slider-horizontal .ui-slider-handle {
+  margin-left: -80px;
+  margin-top: -1px;
 }
 .slider .ui-slider-handle {
   position: absolute;
@@ -654,9 +660,6 @@ section:first-of-type::before, section:last-of-type::after {
   height: 8px;
   cursor: default;
   border-radius: 5px;
-}
-.slider .ui-slider-handle:focus {
-  outline: none;
 }
 .slider .ui-slider {
   position: relative;
@@ -686,6 +689,50 @@ section:first-of-type::before, section:last-of-type::after {
   margin: 7px;
   height: 70px;
   background-color: white;
+}
+
+.featured__pair {
+  text-align: left;
+  width: 100%;
+  color: #171717;
+}
+.featured__pair img {
+  width: 100%;
+  height: auto;
+}
+.featured__pair .pair__info {
+  padding: 1rem 0 0 1.5rem;
+  float: right;
+  width: 100%;
+}
+.featured__pair .pair__title {
+  margin-top: 1rem;
+}
+.featured__pair .pair__title p {
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.featured__pair .pair__price {
+  margin-top: 1rem;
+}
+.featured__pair .pair__price p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.featured__pair .pair__rating {
+  color: #e58f0f;
+}
+.featured__pair .pair__rating .fa-star {
+  margin-right: 5px;
+  font-size: 0.75rem;
+}
+.featured__pair .pair__rating .fa-star:last-child {
+  margin-right: 0;
+}
+.featured__pair .empty {
+  color: #444444;
 }
 
 /*# sourceMappingURL=style.css.map */

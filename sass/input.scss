@@ -479,6 +479,7 @@ body {
 .extra {
     [class*="col-"] {
         padding: 0 5rem 0 1rem;
+        margin-bottom: 2rem;
     }
 
     text-align: justify;
@@ -683,6 +684,12 @@ section {
 
 .reviews {
     color: $bg-dark;
+    min-height: 300px;
+    position: relative;
+
+    .container-fluid {
+        min-height: 300px;
+    }
 
     .row {
         width: 100%;
@@ -691,8 +698,7 @@ section {
     }
 
     .col-lg-4 {
-        display: inline-block;
-        flex: none;
+        position: absolute;
 
         &:last-of-type {
             margin-right: 0;
@@ -790,6 +796,13 @@ section {
 
     .ui-slider-horizontal {
         height: 8px;
+        width: 400px;
+        margin-left: 81px;
+    }
+
+    .ui-slider-horizontal .ui-slider-handle {
+        margin-left: -80px;
+        margin-top: -1px;
     }
 
     .ui-slider-handle {
@@ -799,8 +812,9 @@ section {
         height: 8px;
         cursor: default;
         border-radius: 5px;
-        &:focus{
-            outline: none;
+
+        &:focus {
+            
         }
     }
 
@@ -837,5 +851,61 @@ section {
         margin: 7px;
         height: 70px;
         background-color: white;
+    }
+}
+
+.featured {
+    &__pair {
+        text-align: left;
+        width: 100%;
+        color: $bg-dark;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .pair__info {
+            padding: 1rem 0 0 1.5rem;
+            float: right;
+            width: 100%;
+        }
+
+        .pair__title {
+            margin-top: 1rem;
+
+            p {
+                line-height: 1rem;
+                font-weight: 600;
+                text-transform: capitalize;
+                font-size: 1rem;
+            }
+        }
+
+        .pair__price {
+            margin-top: 1rem;
+
+            p {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+
+        .pair__rating {
+            color: #e58f0f;
+
+            .fa-star {
+                margin-right: 5px;
+                font-size: 0.75rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .empty {
+            color: $bg-grey;
+        }
     }
 }
