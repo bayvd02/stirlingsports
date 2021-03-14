@@ -8,6 +8,7 @@ $bg-black: #000;
 $bg-light: #f2f2f2;
 $bg-green: #19ce96;
 $bg-white: white;
+$bg-lightgrey: #a7a7a7;
 
 /* Text Colors */
 $text-light: white;
@@ -483,7 +484,7 @@ body {
     }
 
     text-align: justify;
-    padding-top: 10rem;
+    padding-top: 8rem;
     padding-left: 6rem;
     color: rgba(1, 1, 1, 0.7);
 
@@ -528,7 +529,7 @@ body {
             width: 10px;
             height: 10px;
             position: relative;
-            margin: 0 8px;
+            margin: 0 10px;
             border-radius: 50%;
 
             :last-child {
@@ -537,7 +538,7 @@ body {
         }
 
         .empty {
-            background: $bg-grey;
+            background: $bg-lightgrey;
         }
 
         .filled {
@@ -545,12 +546,13 @@ body {
         }
 
         .outline:before {
+            display: inline-block;
+            top: -50%;
+            left: -50%;
             content: "";
             position: absolute;
             width: 20px;
             height: 20px;
-            top: calc(50% - 10px);
-            left: calc(50% - 10px);
             background: transparent;
             border-radius: 50%;
             border: 2px solid $bg-green;
@@ -613,7 +615,7 @@ body {
         }
 
         .empty {
-            color: $bg-grey;
+            color: $bg-lightgrey;
         }
     }
 }
@@ -695,6 +697,7 @@ section {
         width: 100%;
         flex-wrap: nowrap;
         overflow: visible;
+        transition: all 0.5s ease;
     }
 
     .col-lg-4 {
@@ -705,28 +708,6 @@ section {
         }
     }
 
-    .slidera {
-        width: 600px;
-        height: 4px;
-        background: $bg-white;
-        border-radius: 5px;
-        margin: 20px auto;
-        position: relative;
-    }
-
-    .ui-slider-handlea {
-        background-color: $bg-green;
-        display: block;
-        position: absolute;
-        z-index: 0;
-        width: 150px;
-        height: 4px;
-        cursor: default;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        border-radius: 5px;
-    }
 
     &__single {
         padding: 1.5rem 2rem;
@@ -774,7 +755,7 @@ section {
 }
 
 .slider {
-    width: 800px;
+    width: 600px;
     height: 8px;
     background: $bg-white;
     border-radius: 5px;
@@ -796,7 +777,7 @@ section {
 
     .ui-slider-horizontal {
         height: 8px;
-        width: 400px;
+        width: 440px;
         margin-left: 81px;
     }
 
@@ -813,14 +794,14 @@ section {
         cursor: default;
         border-radius: 5px;
 
-        &:focus {
-            
-        }
+        background-color: $bg-green;
+
+        &:focus {}
     }
 
     .ui-slider {
-        position: relative;
         text-align: left;
+        position: relative;
     }
 
     .ui-widget-overlay {
@@ -855,14 +836,28 @@ section {
 }
 
 .featured {
+    padding: 2rem 0;
+
     &__pair {
         text-align: left;
         width: 100%;
         color: $bg-dark;
 
-        img {
-            width: 100%;
+        .overlay {
             height: auto;
+            position: relative;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            :hover {
+                opacity: 0.9;
+                background-color: radial-gradient(#B82E1F, #000000);
+            }
         }
 
         .pair__info {
@@ -905,7 +900,56 @@ section {
         }
 
         .empty {
-            color: $bg-grey;
+            color: $bg-lightgrey;
+        }
+    }
+}
+
+.footer {
+    padding: 4rem 0;
+    max-width: 100%;
+    min-height: 400px;
+    background: $bg-black;
+
+    [class*="col-"] {
+        text-transform: uppercase;
+        color: #818181;
+        padding: 0 0 0 3rem;
+        p {
+            color: $bg-green;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+                color: $text-hover;
+            }
+
+        }
+
+        li {
+            font-size: 0.75rem;
+            list-style: none;
+        }
+        .socials{
+            .fa-instagram{
+                font-size: 1rem;
+            }
+            a{
+                display: inline-block;
+            }
+            i{
+                margin-right: 5px;
+                &:last-child{
+                    margin-right: none;
+                }
+            }
+        }
+        .copyright{
+            font-size: 0.75rem;
+            color: $bg-lightgrey;
         }
     }
 }
