@@ -1,0 +1,821 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700;900&display=swap");
+/* Background Colors */
+/* Text Colors */
+/* line 18, D:/Web/brackets/eshop/sass/input.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* line 23, D:/Web/brackets/eshop/sass/input.scss */
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit; }
+
+/* line 31, D:/Web/brackets/eshop/sass/input.scss */
+html {
+  width: 100%; }
+
+/* line 35, D:/Web/brackets/eshop/sass/input.scss */
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto Slab', serif;
+  color: white; }
+  /* line 41, D:/Web/brackets/eshop/sass/input.scss */
+  body ul {
+    margin: 0;
+    padding: 0; }
+  /* line 46, D:/Web/brackets/eshop/sass/input.scss */
+  body .fas {
+    display: inline-block; }
+
+/* line 51, D:/Web/brackets/eshop/sass/input.scss */
+.header {
+  background: #171717;
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  /* line 58, D:/Web/brackets/eshop/sass/input.scss */
+  .header .row > * {
+    padding: 0; }
+  /* line 62, D:/Web/brackets/eshop/sass/input.scss */
+  .header__logo {
+    padding-top: 4px;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 900; }
+    /* line 68, D:/Web/brackets/eshop/sass/input.scss */
+    .header__logo a {
+      display: block;
+      padding: 2px 0;
+      position: relative;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700; }
+      /* line 77, D:/Web/brackets/eshop/sass/input.scss */
+      .header__logo a:hover {
+        color: #F8D210; }
+  /* line 86, D:/Web/brackets/eshop/sass/input.scss */
+  .header__dropdown .content {
+    display: none;
+    position: absolute;
+    background-color: #444444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; }
+  /* line 95, D:/Web/brackets/eshop/sass/input.scss */
+  .header__dropdown:hover .content {
+    display: block; }
+  /* line 99, D:/Web/brackets/eshop/sass/input.scss */
+  .header__dropdown a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; }
+  /* line 106, D:/Web/brackets/eshop/sass/input.scss */
+  .header__dropdown li {
+    padding: 5px 10px; }
+  /* line 111, D:/Web/brackets/eshop/sass/input.scss */
+  .header__menu {
+    height: 100%;
+    margin-left: 1.5rem; }
+    /* line 115, D:/Web/brackets/eshop/sass/input.scss */
+    .header__menu ul {
+      padding-top: 8px; }
+      /* line 118, D:/Web/brackets/eshop/sass/input.scss */
+      .header__menu ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 15px; }
+        /* line 123, D:/Web/brackets/eshop/sass/input.scss */
+        .header__menu ul li a {
+          display: block;
+          padding: 2px 0;
+          position: relative;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 700; }
+          /* line 132, D:/Web/brackets/eshop/sass/input.scss */
+          .header__menu ul li a:hover {
+            color: #F8D210; }
+            /* line 135, D:/Web/brackets/eshop/sass/input.scss */
+            .header__menu ul li a:hover:after {
+              transform: scale(1); }
+          /* line 140, D:/Web/brackets/eshop/sass/input.scss */
+          .header__menu ul li a:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: #F8D210;
+            transform: scale(0);
+            transition: all 0.25s ease; }
+        /* line 153, D:/Web/brackets/eshop/sass/input.scss */
+        .header__menu ul li:last-child {
+          margin-right: 0; }
+  /* line 160, D:/Web/brackets/eshop/sass/input.scss */
+  .header__right {
+    text-align: right;
+    margin-right: 1.5rem; }
+    /* line 164, D:/Web/brackets/eshop/sass/input.scss */
+    .header__right ul {
+      padding-top: 2px; }
+      /* line 167, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 15px;
+        height: 100%; }
+    /* line 175, D:/Web/brackets/eshop/sass/input.scss */
+    .header__right .hover {
+      border-bottom: 1px solid #F8D210 !important;
+      color: #F8D210; }
+    /* line 180, D:/Web/brackets/eshop/sass/input.scss */
+    .header__right .search-field {
+      border-bottom: 1px solid #aaaaaa;
+      position: relative;
+      width: 100%; }
+      /* line 188, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .search-field input {
+        caret-color: #F8D210;
+        padding-right: 10px;
+        background: inherit;
+        color: inherit; }
+        /* line 194, D:/Web/brackets/eshop/sass/input.scss */
+        .header__right .search-field input::placeholder {
+          font-size: 10px;
+          text-transform: uppercase; }
+        /* line 199, D:/Web/brackets/eshop/sass/input.scss */
+        .header__right .search-field input:focus {
+          outline: none; }
+          /* line 202, D:/Web/brackets/eshop/sass/input.scss */
+          .header__right .search-field input:focus::placeholder {
+            color: transparent; }
+      /* line 208, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .search-field .btn-search {
+        position: absolute;
+        right: 5px;
+        cursor: pointer; }
+        /* line 213, D:/Web/brackets/eshop/sass/input.scss */
+        .header__right .search-field .btn-search:hover {
+          color: #F8D210; }
+      /* line 218, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .search-field #search {
+        border: none; }
+      /* line 222, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .search-field a {
+        color: inherit; }
+    /* line 227, D:/Web/brackets/eshop/sass/input.scss */
+    .header__right .btn-circle {
+      color: white;
+      background: #444444;
+      width: 100%;
+      text-transform: uppercase;
+      border-radius: 50%;
+      position: relative;
+      transition: 0.5s; }
+      /* line 236, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .btn-circle:hover {
+        color: #444444;
+        background: white; }
+    /* line 242, D:/Web/brackets/eshop/sass/input.scss */
+    .header__right .btn-round {
+      text-align: left;
+      color: white;
+      background: #19ce96;
+      text-transform: uppercase;
+      border-radius: 50px;
+      width: 140px;
+      position: relative;
+      padding-left: 30px;
+      transition: 0.5s; }
+      /* line 253, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .btn-round .fa-shopping-cart {
+        margin-right: 5px; }
+      /* line 257, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .btn-round .circle {
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: 0.75rem;
+        background: #000;
+        color: white;
+        display: inline-block;
+        line-height: 1.25rem;
+        text-align: center; }
+      /* line 270, D:/Web/brackets/eshop/sass/input.scss */
+      .header__right .btn-round:hover {
+        color: #19ce96;
+        background: white; }
+
+/* line 279, D:/Web/brackets/eshop/sass/input.scss */
+.product {
+  background: url("../img/Logo_NIKE.png") no-repeat center center;
+  background-size: 50%;
+  font-family: 'Bebas Neue', cursive;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  color: white; }
+  /* line 287, D:/Web/brackets/eshop/sass/input.scss */
+  .product .z-2 {
+    z-index: 2; }
+  /* line 291, D:/Web/brackets/eshop/sass/input.scss */
+  .product__info {
+    padding-left: 4rem; }
+  /* line 295, D:/Web/brackets/eshop/sass/input.scss */
+  .product__image {
+    position: relative; }
+    /* line 298, D:/Web/brackets/eshop/sass/input.scss */
+    .product__image img {
+      position: absolute;
+      left: calc(50% - 400px);
+      bottom: -150px;
+      z-index: 1;
+      width: 800px;
+      height: auto; }
+      @media (min-width: 768px) and (max-width: 992px) {
+        /* line 298, D:/Web/brackets/eshop/sass/input.scss */
+        .product__image img {
+          position: relative;
+          widows: 100%;
+          height: auto; } }
+  /* line 315, D:/Web/brackets/eshop/sass/input.scss */
+  .product__title {
+    margin-top: 2rem; }
+    /* line 318, D:/Web/brackets/eshop/sass/input.scss */
+    .product__title h1 {
+      line-height: 4.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 5rem; }
+  /* line 326, D:/Web/brackets/eshop/sass/input.scss */
+  .product__price {
+    margin-top: 1.5rem; }
+    /* line 329, D:/Web/brackets/eshop/sass/input.scss */
+    .product__price p {
+      font-size: 2.5rem;
+      color: #19ce96; }
+  /* line 335, D:/Web/brackets/eshop/sass/input.scss */
+  .product__rating {
+    color: #e58f0f; }
+    /* line 338, D:/Web/brackets/eshop/sass/input.scss */
+    .product__rating .fa-star {
+      margin-right: 10px;
+      font-size: 0.75rem; }
+      /* line 342, D:/Web/brackets/eshop/sass/input.scss */
+      .product__rating .fa-star:last-child {
+        margin-right: 0; }
+  /* line 348, D:/Web/brackets/eshop/sass/input.scss */
+  .product__size {
+    margin-top: 2rem;
+    z-index: 2;
+    padding: 0 70px 0 0px; }
+    /* line 353, D:/Web/brackets/eshop/sass/input.scss */
+    .product__size .btn-square {
+      margin: 0 auto;
+      color: white;
+      border: none;
+      background: #444444;
+      width: 50px;
+      height: 50px;
+      text-transform: uppercase;
+      position: relative;
+      transition: 0.5s; }
+      /* line 364, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size .btn-square:hover {
+        color: #444444;
+        background: white; }
+    /* line 370, D:/Web/brackets/eshop/sass/input.scss */
+    .product__size .row {
+      margin-right: 0;
+      margin-left: 0; }
+      /* line 374, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size .row .col-20 {
+        padding: 1px;
+        text-align: center;
+        display: flex;
+        flex: 0 0 20%;
+        width: 20%;
+        align-content: center; }
+        /* line 382, D:/Web/brackets/eshop/sass/input.scss */
+        .product__size .row .col-20 button {
+          width: 45px;
+          background: #444444;
+          color: white;
+          height: 45px; }
+          /* line 388, D:/Web/brackets/eshop/sass/input.scss */
+          .product__size .row .col-20 button:hover {
+            color: #444444;
+            background: white; }
+    /* line 397, D:/Web/brackets/eshop/sass/input.scss */
+    .product__size__header {
+      padding: 0 2px;
+      margin-bottom: 0.5rem; }
+      /* line 401, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size__header p {
+        margin: 0;
+        padding: 0; }
+      /* line 406, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size__header .f-right {
+        display: inline-block;
+        float: right; }
+      /* line 411, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size__header .f-left {
+        display: inline-block;
+        float: left; }
+      /* line 416, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size__header:after {
+        content: "";
+        display: table;
+        clear: both; }
+      /* line 423, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size__header a {
+        text-decoration: none;
+        color: #19ce96; }
+        /* line 427, D:/Web/brackets/eshop/sass/input.scss */
+        .product__size__header a:hover {
+          color: #F8D210; }
+    /* line 433, D:/Web/brackets/eshop/sass/input.scss */
+    .product__size .btn-round {
+      margin-top: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+      display: flex;
+      text-align: left;
+      color: #000;
+      background: #19ce96;
+      text-transform: uppercase;
+      border-radius: 50px;
+      width: 100%;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 2.5rem;
+      position: relative;
+      padding-left: 30px;
+      transition: 0.5s; }
+      /* line 451, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size .btn-round .fa-circle {
+        position: absolute;
+        right: 5px;
+        font-size: 1.5rem;
+        color: #000; }
+      /* line 458, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size .btn-round .right-arrow {
+        text-align: center;
+        line-height: 1.5rem;
+        content: "";
+        right: 12px;
+        position: absolute;
+        color: white;
+        width: 30px;
+        height: 20px;
+        background: #000;
+        border-radius: 20px; }
+      /* line 471, D:/Web/brackets/eshop/sass/input.scss */
+      .product__size .btn-round:hover {
+        color: #19ce96;
+        background: white; }
+
+/* line 480, D:/Web/brackets/eshop/sass/input.scss */
+.extra {
+  text-align: justify;
+  padding-top: 8rem;
+  padding-left: 6rem;
+  color: rgba(1, 1, 1, 0.7); }
+  /* line 481, D:/Web/brackets/eshop/sass/input.scss */
+  .extra [class*="col-"] {
+    padding: 0 5rem 0 1rem;
+    margin-bottom: 2rem; }
+  /* line 491, D:/Web/brackets/eshop/sass/input.scss */
+  .extra p.title {
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #171717;
+    text-transform: uppercase;
+    margin-bottom: 1rem; }
+  /* line 501, D:/Web/brackets/eshop/sass/input.scss */
+  .extra p {
+    padding: 0;
+    margin: 0;
+    font-family: "Uni-Sans", Helvetica, Arial, sans-serif; }
+  /* line 507, D:/Web/brackets/eshop/sass/input.scss */
+  .extra__details {
+    text-transform: uppercase; }
+    /* line 510, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__details:first-of-type {
+      border-top: 1px solid #aaaaaa; }
+  /* line 515, D:/Web/brackets/eshop/sass/input.scss */
+  .extra__category {
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #aaaaaa;
+    width: 100%; }
+    /* line 522, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__category * {
+      display: inline-block;
+      margin: 0;
+      padding: 0; }
+    /* line 528, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__category i {
+      width: 10px;
+      height: 10px;
+      position: relative;
+      margin: 0 10px;
+      border-radius: 50%; }
+      /* line 535, D:/Web/brackets/eshop/sass/input.scss */
+      .extra__category i :last-child {
+        margin-right: 0px; }
+    /* line 540, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__category .empty {
+      background: #a7a7a7; }
+    /* line 544, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__category .filled {
+      background: #19ce96; }
+    /* line 548, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__category .outline:before {
+      display: inline-block;
+      top: -50%;
+      left: -50%;
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border-radius: 50%;
+      border: 2px solid #19ce96; }
+  /* line 563, D:/Web/brackets/eshop/sass/input.scss */
+  .extra__rating {
+    float: right; }
+  /* line 567, D:/Web/brackets/eshop/sass/input.scss */
+  .extra__pair {
+    text-align: left;
+    width: 100%;
+    color: #171717; }
+    /* line 572, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__pair img {
+      float: left;
+      width: 40%;
+      height: auto; }
+    /* line 578, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__pair .pair__info {
+      padding: 1rem 0 0 1.5rem;
+      float: right;
+      width: 60%; }
+    /* line 584, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__pair .pair__title {
+      margin-top: 1rem; }
+      /* line 587, D:/Web/brackets/eshop/sass/input.scss */
+      .extra__pair .pair__title p {
+        line-height: 1rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 1rem; }
+    /* line 595, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__pair .pair__price {
+      margin-top: 1rem; }
+      /* line 598, D:/Web/brackets/eshop/sass/input.scss */
+      .extra__pair .pair__price p {
+        font-size: 1rem;
+        font-weight: 600; }
+    /* line 604, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__pair .pair__rating {
+      color: #e58f0f; }
+      /* line 607, D:/Web/brackets/eshop/sass/input.scss */
+      .extra__pair .pair__rating .fa-star {
+        margin-right: 5px;
+        font-size: 0.75rem; }
+        /* line 611, D:/Web/brackets/eshop/sass/input.scss */
+        .extra__pair .pair__rating .fa-star:last-child {
+          margin-right: 0; }
+    /* line 617, D:/Web/brackets/eshop/sass/input.scss */
+    .extra__pair .empty {
+      color: #a7a7a7; }
+
+/* line 623, D:/Web/brackets/eshop/sass/input.scss */
+section {
+  max-width: 100%;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden; }
+  /* line 629, D:/Web/brackets/eshop/sass/input.scss */
+  section:first-of-type {
+    overflow: visible; }
+  /* line 633, D:/Web/brackets/eshop/sass/input.scss */
+  section.section-dark {
+    background: #000; }
+  /* line 637, D:/Web/brackets/eshop/sass/input.scss */
+  section.section-white {
+    background: white; }
+  /* line 641, D:/Web/brackets/eshop/sass/input.scss */
+  section.section-light {
+    background: #f2f2f2; }
+  /* line 646, D:/Web/brackets/eshop/sass/input.scss */
+  section:nth-child(2n+2):after {
+    bottom: -30px;
+    left: -30px; }
+  /* line 651, D:/Web/brackets/eshop/sass/input.scss */
+  section:nth-child(2n+2):before {
+    top: -30px;
+    right: -30px; }
+  /* line 658, D:/Web/brackets/eshop/sass/input.scss */
+  section:nth-child(2n+3):before {
+    top: -30px;
+    left: -30px; }
+  /* line 663, D:/Web/brackets/eshop/sass/input.scss */
+  section:nth-child(2n+3):after {
+    bottom: -30px;
+    right: -30px; }
+  /* line 669, D:/Web/brackets/eshop/sass/input.scss */
+  section:after, section:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #19ce96;
+    width: 60px;
+    height: 60px; }
+  /* line 679, D:/Web/brackets/eshop/sass/input.scss */
+  section:first-of-type::before, section:last-of-type::after {
+    content: none;
+    width: 0;
+    height: 0; }
+
+/* line 687, D:/Web/brackets/eshop/sass/input.scss */
+.reviews {
+  color: #171717;
+  min-height: 300px;
+  position: relative; }
+  /* line 692, D:/Web/brackets/eshop/sass/input.scss */
+  .reviews .container-fluid {
+    min-height: 300px; }
+  /* line 696, D:/Web/brackets/eshop/sass/input.scss */
+  .reviews .row {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: visible;
+    transition: all 0.5s ease; }
+  /* line 703, D:/Web/brackets/eshop/sass/input.scss */
+  .reviews .col-lg-4 {
+    position: absolute; }
+    /* line 706, D:/Web/brackets/eshop/sass/input.scss */
+    .reviews .col-lg-4:last-of-type {
+      margin-right: 0; }
+  /* line 712, D:/Web/brackets/eshop/sass/input.scss */
+  .reviews__single {
+    padding: 1.5rem 2rem;
+    min-height: 300px;
+    width: 100%;
+    background: white;
+    color: rgba(1, 1, 1, 0.7);
+    font-weight: 400; }
+    /* line 720, D:/Web/brackets/eshop/sass/input.scss */
+    .reviews__single > * {
+      margin-top: 1rem; }
+    /* line 724, D:/Web/brackets/eshop/sass/input.scss */
+    .reviews__single .content {
+      font-family: "Uni-Sans", Helvetica, Arial, sans-serif; }
+    /* line 728, D:/Web/brackets/eshop/sass/input.scss */
+    .reviews__single .author {
+      color: #444444;
+      font-weight: 400; }
+    /* line 734, D:/Web/brackets/eshop/sass/input.scss */
+    .reviews__single .rating {
+      color: #e58f0f; }
+      /* line 737, D:/Web/brackets/eshop/sass/input.scss */
+      .reviews__single .rating .fa-star {
+        margin-right: 10px;
+        font-size: 0.75rem; }
+        /* line 741, D:/Web/brackets/eshop/sass/input.scss */
+        .reviews__single .rating .fa-star:last-child {
+          margin-right: 0; }
+
+/* line 750, D:/Web/brackets/eshop/sass/input.scss */
+.no-transition {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none; }
+
+/* line 757, D:/Web/brackets/eshop/sass/input.scss */
+.slider {
+  width: 600px;
+  height: 8px;
+  background: white;
+  border-radius: 5px;
+  margin: 20px auto; }
+  /* line 764, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-state-active {
+    opacity: 1; }
+  /* line 768, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-state-hover {
+    opacity: 1; }
+  /* line 772, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-slider-handle {
+    border: 1px solid white;
+    background-color: #19ce96;
+    display: block; }
+  /* line 778, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-slider-horizontal {
+    height: 8px;
+    width: 440px;
+    margin-left: 81px; }
+  /* line 784, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-slider-horizontal .ui-slider-handle {
+    margin-left: -80px;
+    margin-top: -1px; }
+  /* line 789, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-slider-handle {
+    position: absolute;
+    z-index: 0;
+    width: 160px;
+    height: 8px;
+    cursor: default;
+    border-radius: 5px;
+    background-color: #19ce96; }
+  /* line 802, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-slider {
+    text-align: left;
+    position: relative; }
+  /* line 807, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-widget-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  /* line 815, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-state-active .thumbnail {
+    display: block;
+    opacity: 1;
+    transform: scale(1, 1); }
+  /* line 821, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-state-disabled {
+    cursor: default !important; }
+  /* line 825, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .ui-state-hover .thumbnail {
+    display: block;
+    opacity: 0; }
+  /* line 830, D:/Web/brackets/eshop/sass/input.scss */
+  .slider .thumbnail div {
+    width: 100px;
+    margin: 7px;
+    height: 70px;
+    background-color: white; }
+
+/* line 838, D:/Web/brackets/eshop/sass/input.scss */
+.featured {
+  padding: 2rem 0; }
+  /* line 841, D:/Web/brackets/eshop/sass/input.scss */
+  .featured__pair {
+    text-align: left;
+    width: 100%;
+    color: #171717; }
+    /* line 846, D:/Web/brackets/eshop/sass/input.scss */
+    .featured__pair .overlay {
+      height: auto;
+      position: relative;
+      width: 100%; }
+      /* line 851, D:/Web/brackets/eshop/sass/input.scss */
+      .featured__pair .overlay img {
+        width: 100%;
+        height: auto;
+        display: block; }
+      /* line 857, D:/Web/brackets/eshop/sass/input.scss */
+      .featured__pair .overlay :hover {
+        opacity: 0.9;
+        background-color: radial-gradient(#B82E1F, #000000); }
+    /* line 863, D:/Web/brackets/eshop/sass/input.scss */
+    .featured__pair .pair__info {
+      padding: 1rem 0 0 1.5rem;
+      float: right;
+      width: 100%; }
+    /* line 869, D:/Web/brackets/eshop/sass/input.scss */
+    .featured__pair .pair__title {
+      margin-top: 1rem; }
+      /* line 872, D:/Web/brackets/eshop/sass/input.scss */
+      .featured__pair .pair__title p {
+        line-height: 1rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 1rem; }
+    /* line 880, D:/Web/brackets/eshop/sass/input.scss */
+    .featured__pair .pair__price {
+      margin-top: 1rem; }
+      /* line 883, D:/Web/brackets/eshop/sass/input.scss */
+      .featured__pair .pair__price p {
+        font-size: 1rem;
+        font-weight: 600; }
+    /* line 889, D:/Web/brackets/eshop/sass/input.scss */
+    .featured__pair .pair__rating {
+      color: #e58f0f; }
+      /* line 892, D:/Web/brackets/eshop/sass/input.scss */
+      .featured__pair .pair__rating .fa-star {
+        margin-right: 5px;
+        font-size: 0.75rem; }
+        /* line 896, D:/Web/brackets/eshop/sass/input.scss */
+        .featured__pair .pair__rating .fa-star:last-child {
+          margin-right: 0; }
+    /* line 902, D:/Web/brackets/eshop/sass/input.scss */
+    .featured__pair .empty {
+      color: #a7a7a7; }
+
+/* line 908, D:/Web/brackets/eshop/sass/input.scss */
+.footer {
+  padding: 4rem 0;
+  max-width: 100%;
+  min-height: 400px;
+  background: #000; }
+  /* line 914, D:/Web/brackets/eshop/sass/input.scss */
+  .footer [class*="col-"] {
+    text-transform: uppercase;
+    color: #818181;
+    padding: 0 0 0 3rem; }
+    /* line 919, D:/Web/brackets/eshop/sass/input.scss */
+    .footer [class*="col-"] p {
+      color: #19ce96; }
+    /* line 923, D:/Web/brackets/eshop/sass/input.scss */
+    .footer [class*="col-"] a {
+      display: block;
+      text-decoration: none; }
+      /* line 927, D:/Web/brackets/eshop/sass/input.scss */
+      .footer [class*="col-"] a:hover {
+        color: #F8D210; }
+    /* line 933, D:/Web/brackets/eshop/sass/input.scss */
+    .footer [class*="col-"] li {
+      font-size: 0.75rem;
+      list-style: none; }
+    /* line 939, D:/Web/brackets/eshop/sass/input.scss */
+    .footer [class*="col-"] .socials .fa-instagram {
+      font-size: 1.05rem;
+      font-weight: 500; }
+    /* line 944, D:/Web/brackets/eshop/sass/input.scss */
+    .footer [class*="col-"] .socials a {
+      display: inline-block; }
+    /* line 948, D:/Web/brackets/eshop/sass/input.scss */
+    .footer [class*="col-"] .socials i {
+      margin-right: 5px; }
+      /* line 951, D:/Web/brackets/eshop/sass/input.scss */
+      .footer [class*="col-"] .socials i:last-child {
+        margin-right: none; }
+    /* line 957, D:/Web/brackets/eshop/sass/input.scss */
+    .footer [class*="col-"] .copyright {
+      font-size: 0.75rem;
+      color: #a7a7a7; }
+
+@keyframes grow {
+  from {
+    opacity: 0;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes shrink {
+  to {
+    opacity: 0;
+    transform: scale(0.8); } }
+
+/* line 984, D:/Web/brackets/eshop/sass/input.scss */
+.notification {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #fff;
+  font-size: 16px;
+  padding: 15px 20px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  animation: grow 0.5s ease-in forwards; }
+  /* line 995, D:/Web/brackets/eshop/sass/input.scss */
+  .notification__hide {
+    animation: shrink 0.3s ease-out forwards; }
+  /* line 999, D:/Web/brackets/eshop/sass/input.scss */
+  .notification strong {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; }
+  /* line 1006, D:/Web/brackets/eshop/sass/input.scss */
+  .notification__container {
+    z-index: 5;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 300px;
+    max-width: calc(100% - 30px); }
+  /* line 1015, D:/Web/brackets/eshop/sass/input.scss */
+  .notification__success {
+    background-color: #55b559; }
+
+/*# sourceMappingURL=input.css.map */
