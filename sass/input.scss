@@ -249,6 +249,8 @@ body {
             position: relative;
             padding-left: 30px;
             transition: 0.5s;
+            display: flex;
+            align-items: center;
 
             .fa-shopping-cart {
                 margin-right: 5px;
@@ -353,9 +355,9 @@ body {
         .btn-square {
             margin: 0 auto;
             width: 45px;
-                    background: $bg-grey;
-                    color: $text-light;
-                    height: 45px;
+            background: $bg-grey;
+            color: $text-light;
+            height: 45px;
             border: none;
             text-transform: uppercase;
             position: relative;
@@ -519,10 +521,10 @@ body {
         }
 
         i {
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             position: relative;
-            margin: 0 10px;
+            margin: 0 6px;
             border-radius: 50%;
 
             :last-child {
@@ -539,21 +541,28 @@ body {
         }
 
         .outline:before {
-            display: inline-block;
-            top: -50%;
-            left: -50%;
+            display: block;
             content: "";
             position: absolute;
             width: 20px;
             height: 20px;
             background: transparent;
             border-radius: 50%;
-            border: 2px solid $bg-green;
+            border: 2px solid #19ce96;
+            right: calc(50% - 10px);
+            bottom: calc(50% - 10px);
         }
 
+        &:after {
+            content: "";
+            display: table;
+            width: 100%;
+            clear: both;
+        }
     }
 
     &__rating {
+        height: 20px;
         float: right;
     }
 
@@ -776,7 +785,6 @@ section {
 
     .ui-slider-horizontal .ui-slider-handle {
         margin-left: -80px;
-        margin-top: -1px;
     }
 
     .ui-slider-handle {
@@ -789,7 +797,9 @@ section {
 
         background-color: $bg-green;
 
-        &:focus {}
+        &:focus {
+            outline: none;
+        }
     }
 
     .ui-slider {
@@ -903,12 +913,15 @@ section {
     max-width: 100%;
     min-height: 300px;
     background: $bg-black;
-    .row{
+
+    .row {
         width: 80%;
-        &:first-of-type{
+
+        &:first-of-type {
             margin: 0 auto;
         }
     }
+
     [class*="col-"] {
         text-transform: uppercase;
         color: #818181;
@@ -988,7 +1001,7 @@ section {
     padding: 15px 20px;
     line-height: 20px;
     margin-bottom: 15px;
-    animation: grow 0.5s ease-in forwards;
+    animation: grow 0.3s ease-in forwards;
 
     &__hide {
         animation: shrink 0.3s ease-out forwards;
@@ -1013,7 +1026,8 @@ section {
     &__success {
         background: #55b559;
     }
-    &__error{
+
+    &__error {
         background: red;
     }
 }

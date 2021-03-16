@@ -197,6 +197,8 @@ body .fas {
   position: relative;
   padding-left: 30px;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
 }
 .header__right .btn-round .fa-shopping-cart {
   margin-right: 5px;
@@ -423,10 +425,10 @@ body .fas {
   padding: 0;
 }
 .extra__category i {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   position: relative;
-  margin: 0 10px;
+  margin: 0 6px;
   border-radius: 50%;
 }
 .extra__category i :last-child {
@@ -439,9 +441,7 @@ body .fas {
   background: #19ce96;
 }
 .extra__category .outline:before {
-  display: inline-block;
-  top: -50%;
-  left: -50%;
+  display: block;
   content: "";
   position: absolute;
   width: 20px;
@@ -449,8 +449,17 @@ body .fas {
   background: transparent;
   border-radius: 50%;
   border: 2px solid #19ce96;
+  right: calc(50% - 10px);
+  bottom: calc(50% - 10px);
+}
+.extra__category:after {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
 }
 .extra__rating {
+  height: 20px;
   float: right;
 }
 .extra__pair {
@@ -627,7 +636,6 @@ section:first-of-type::before, section:last-of-type::after {
 }
 .slider .ui-slider-horizontal .ui-slider-handle {
   margin-left: -80px;
-  margin-top: -1px;
 }
 .slider .ui-slider-handle {
   position: absolute;
@@ -637,6 +645,9 @@ section:first-of-type::before, section:last-of-type::after {
   cursor: default;
   border-radius: 5px;
   background-color: #19ce96;
+}
+.slider .ui-slider-handle:focus {
+  outline: none;
 }
 .slider .ui-slider {
   text-align: left;
@@ -799,7 +810,7 @@ section:first-of-type::before, section:last-of-type::after {
   padding: 15px 20px;
   line-height: 20px;
   margin-bottom: 15px;
-  animation: grow 0.5s ease-in forwards;
+  animation: grow 0.3s ease-in forwards;
 }
 .notification__hide {
   animation: shrink 0.3s ease-out forwards;
