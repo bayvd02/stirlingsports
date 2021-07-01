@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Simple text</h1>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <button id="first">Button 1</button>
+    <button id="second">Button 2</button>
+    <button id="third">Button 3</button>
+    <button id="fourth">Button 4</button>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $("#first").click(()=>{
+                $("h1").html("First example");
+            });
+            $("#second").click(()=>{
+                $("p").html("Second example");
+            });
+            $("#third").click(()=>{
+                $("p:first-of-type").html("Only first");
+            });
+            $("#fourth").click(()=>{
+                $("p").first().html("Only first jQuery");
+            });
+        });
+    </script>
+</body>
+</html>

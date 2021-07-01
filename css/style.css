@@ -833,7 +833,55 @@ section:first-of-type::before, section:last-of-type::after {
   background: #55b559;
 }
 .notification__error {
-  background: red;
+  background: #ff4040;
+}
+
+.modal {
+  color: #171717;
+}
+
+.modal-title {
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content {
+  border-radius: 0.25rem;
+}
+.modal-content .btn-round {
+  text-align: center;
+  color: #000;
+  background: #19ce96;
+  text-transform: uppercase;
+  border-radius: 50px;
+  width: 140px;
+  position: relative;
+  transition: 0.5s;
+  margin: 0 auto;
+  display: block;
+}
+.modal-content .btn-round:hover {
+  color: #19ce96;
+  background: #000;
+}
+
+.text-field {
+  margin-bottom: 2rem;
+}
+.text-field input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border: none;
+  width: 300px;
+  border-bottom: 1px solid #444444;
+}
+.text-field input:focus {
+  outline: none;
+}
+.text-field input:focus::placeholder {
+  color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

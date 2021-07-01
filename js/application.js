@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $("#loginBtn").on("click", ()=>{
+       $(".modal").modal("show"); 
+    });
     var offset = setupSlides();
     $(".btn-search").hover(
         function () {

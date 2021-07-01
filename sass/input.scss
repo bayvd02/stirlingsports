@@ -1028,6 +1028,60 @@ section {
     }
 
     &__error {
-        background: red;
+        background: #ff4040;
+    }
+}
+
+.modal {
+    color: $bg-dark;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-content {
+    border-radius: 0.25rem;
+
+    .btn-round {
+        text-align: center;
+        color: $bg-black;
+        background: $bg-green;
+        text-transform: uppercase;
+        border-radius: 50px;
+        width: 140px;
+        position: relative;
+        transition: 0.5s;
+        margin: 0 auto;
+        display: block;
+
+        &:hover {
+            color: $bg-green;
+            background: $bg-black;
+        }
+    }
+}
+
+.text-field {
+    margin-bottom: 2rem;
+
+    input {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        border: none;
+        width: 300px;
+        border-bottom: 1px solid $bg-grey;
+
+        &:focus {
+            outline: none;
+
+            &::placeholder {
+                color: transparent;
+            }
+
+        }
     }
 }
